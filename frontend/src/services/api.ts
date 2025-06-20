@@ -3,7 +3,7 @@ import axios, { AxiosResponse } from 'axios';
 // 创建axios实例
 const api = axios.create({
   baseURL: 'http://localhost:8000',  // 后端API地址
-  timeout: 120000,  // 超时时间增加到120秒（图像生成可能需要较长时间）
+  timeout: 60 * 60 * 1000, // 3600000 ms
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
